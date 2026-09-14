@@ -12,7 +12,11 @@
     "langfuse sdk",
     "Trace",
     "Observation",
-    "聚合"
+    "聚合",
+    "Observation Status",
+    "Observation Type",
+    "成本统计",
+    "耗时统计"
   ],
   "type": "录播",
   "status": "已上架",
@@ -27,6 +31,10 @@
     },
     {
       "title": "数据上报",
+      "showIndex": true
+    },
+    {
+      "title": "Observation",
       "showIndex": true
     }
   ]
