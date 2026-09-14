@@ -1,4 +1,4 @@
-.PHONY: build dev debug course course-push
+.PHONY: build dev debug course course-push add-worktree
 
 build:
 	uv run langgraph build -t langgraph-python-agent:$(TAG)
@@ -15,3 +15,10 @@ course:
 course-push:
 	@[ -n "$(SHA)" ] || (echo "请提供提交 hash: make course-push SHA=<hash>" && exit 1)
 	uv run python scripts/course-push.py $(SHA)
+
+add-worktree:
+	git worktree add -b ai-eval/$(branch) /Volumes/数据盘/AppData/worktrees/ai-eval/$(branch)
+
+remove-worktree:
+	git worktree remove --force /Volumes/数据盘/AppData/worktrees/ai-eval/$(branch)
+	git branch -D ai-eval/$(branch)
