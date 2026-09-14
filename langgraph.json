@@ -1,0 +1,15 @@
+{
+  "python_version": "3.13",
+  "source": {
+    "kind": "uv",
+    "root": "."
+  },
+  "graphs": {
+    "main_agent": "ai_eval.agents.main:agent_factory"
+  },
+  "env": ".env",
+  "auth": {
+    "path": "ai_eval.security.auth:auth",
+    "disable_studio_auth": true
+  }
+}
