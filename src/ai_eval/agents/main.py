@@ -43,3 +43,4 @@ def agent_factory():
         tools=[get_current_time, ask_user_question],
         subagents=[web_sub_agent],
     )
+    return agent

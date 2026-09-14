@@ -3,7 +3,7 @@ import asyncio
 from langchain.tools import tool
 from tavily import TavilyClient
 
-from llm_ops.config import tavily_settings
+from ai_eval.config.tavily_settings import tavily_settings
 
 
 @tool

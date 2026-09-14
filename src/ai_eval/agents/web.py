@@ -1,6 +1,5 @@
 from langchain.agents import create_agent
 from ai_eval.tools import web_search, fetch_url, get_current_time
-from langchain.chat_models import init_chat_model
 from ai_eval.utils.create_model import create_model
 
 model = create_model()
