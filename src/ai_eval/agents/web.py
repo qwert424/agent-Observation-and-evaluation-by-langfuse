@@ -1,6 +1,7 @@
 from langchain.agents import create_agent
 from ai_eval.tools import web_search, fetch_url, get_current_time
 from ai_eval.utils.create_model import create_model
+from ai_eval.utils.trace_wrapper import trace_wrapper
 
 model = create_model()
 
@@ -34,3 +35,6 @@ def agent_factory():
         system_prompt=system_prompt,
     )
     return agent
+
+
+agent_factory_with_trace = trace_wrapper(agent_factory)

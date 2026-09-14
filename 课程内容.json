@@ -4,7 +4,16 @@
   "description": "",
   "playerPath": "AI大全栈 / AI / Agent观测与评估",
   "resourceUrl": "https://gitee.com/dev-edu/ai-eval",
-  "skills": ["安装langfuse", "组织与工程"],
+  "skills": [
+    "安装langfuse",
+    "组织与工程",
+    "langfuse控制面",
+    "langfuse api",
+    "langfuse sdk",
+    "Trace",
+    "Observation",
+    "聚合"
+  ],
   "type": "录播",
   "status": "已上架",
   "catalog": [
@@ -14,6 +23,10 @@
     },
     {
       "title": "安装langfuse",
+      "showIndex": true
+    },
+    {
+      "title": "数据上报",
       "showIndex": true
     }
   ]

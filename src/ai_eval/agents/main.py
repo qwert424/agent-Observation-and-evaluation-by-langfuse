@@ -3,6 +3,7 @@ from ai_eval.agents.web import agent_factory as web_agent_factory
 from ai_eval.utils.create_model import create_model
 from deepagents import create_deep_agent
 from deepagents.middleware import CompiledSubAgent
+from ai_eval.utils.trace_wrapper import trace_wrapper
 
 model = create_model()
 
@@ -44,3 +45,6 @@ def agent_factory():
         subagents=[web_sub_agent],
     )
     return agent
+
+
+agent_factory_with_trace = trace_wrapper(agent_factory)

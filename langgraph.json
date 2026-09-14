@@ -5,7 +5,7 @@
     "root": "."
   },
   "graphs": {
-    "main_agent": "ai_eval.agents.main:agent_factory"
+    "main_agent": "ai_eval.agents.main:agent_factory_with_trace"
   },
   "env": ".env",
   "auth": {
