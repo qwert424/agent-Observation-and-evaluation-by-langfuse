@@ -18,6 +18,7 @@ course-push:
 
 add-worktree:
 	git worktree add -b ai-eval/$(branch) /Volumes/数据盘/AppData/worktrees/ai-eval/$(branch)
+	rsync -a --exclude='.git' --exclude='.venv' --exclude='__pycache__' --exclude='.DS_Store' ./ /Volumes/数据盘/AppData/worktrees/ai-eval/$(branch)/
 
 remove-worktree:
 	git worktree remove --force /Volumes/数据盘/AppData/worktrees/ai-eval/$(branch)
