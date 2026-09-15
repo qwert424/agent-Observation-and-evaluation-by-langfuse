@@ -16,7 +16,11 @@
     "Observation Status",
     "Observation Type",
     "成本统计",
-    "耗时统计"
+    "耗时统计",
+    "提示词版本控制",
+    "提示词变量注入",
+    "模型的动态切换",
+    "提示词运行观测"
   ],
   "type": "录播",
   "status": "已上架",
@@ -35,6 +39,10 @@
     },
     {
       "title": "Observation",
+      "showIndex": true
+    },
+    {
+      "title": "提示词管理",
       "showIndex": true
     }
   ]
