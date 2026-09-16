@@ -28,7 +28,10 @@
     "评估器",
     "LLM as Judge",
     "Code Evaluation",
-    "评估器成本优化"
+    "评估器成本优化",
+    "数据集",
+    "线上评估",
+    "离线评估"
   ],
   "type": "录播",
   "status": "已上架",
@@ -67,6 +70,10 @@
     },
     {
       "title": "评估器优化",
+      "showIndex": true
+    },
+    {
+      "title": "数据集",
       "showIndex": true
     }
   ]
