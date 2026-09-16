@@ -75,6 +75,10 @@
     {
       "title": "数据集",
       "showIndex": true
+    },
+    {
+      "title": "补充知识",
+      "showIndex": true
     }
   ]
 }
