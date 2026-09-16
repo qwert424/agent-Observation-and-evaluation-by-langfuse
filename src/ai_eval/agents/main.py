@@ -6,6 +6,8 @@ from deepagents.middleware import CompiledSubAgent
 from ai_eval.utils.trace_wrapper import trace_wrapper
 from ai_eval.utils.get_prompt import get_prompt
 from ai_eval.middlewares.link_prompt_middleware import create_prompt_link_middleware
+from ai_eval.agents.main_agent_state import MainAgentState
+from ai_eval.middlewares.turn_summary import turn_summary
 
 
 async def agent_factory():
@@ -22,8 +24,9 @@ async def agent_factory():
         model=model,
         system_prompt=prompt.compile(),
         tools=[get_current_time, ask_user_question],
+        state_schema=MainAgentState,
         subagents=[web_sub_agent],
-        middleware=[create_prompt_link_middleware(prompt)],
+        middleware=[create_prompt_link_middleware(prompt), turn_summary],
     )
     return agent
 

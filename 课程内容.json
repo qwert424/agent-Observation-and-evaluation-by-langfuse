@@ -27,7 +27,8 @@
     "评估维度",
     "评估器",
     "LLM as Judge",
-    "Code Evaluation"
+    "Code Evaluation",
+    "评估器成本优化"
   ],
   "type": "录播",
   "status": "已上架",
@@ -62,6 +63,10 @@
     },
     {
       "title": "自动化评估器",
+      "showIndex": true
+    },
+    {
+      "title": "评估器优化",
       "showIndex": true
     }
   ]
