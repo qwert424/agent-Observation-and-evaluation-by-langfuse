@@ -24,7 +24,10 @@
     "演练场",
     "评估流水线",
     "人工标注",
-    "评估维度"
+    "评估维度",
+    "评估器",
+    "LLM as Judge",
+    "Code Evaluation"
   ],
   "type": "录播",
   "status": "已上架",
@@ -55,6 +58,10 @@
     },
     {
       "title": "人工评估",
+      "showIndex": true
+    },
+    {
+      "title": "自动化评估器",
       "showIndex": true
     }
   ]
