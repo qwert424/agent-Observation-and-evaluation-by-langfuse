@@ -35,7 +35,9 @@
     "实验对照组",
     "Task",
     "Agent回归测试",
-    "langfuse ui 离线评估"
+    "langfuse ui 离线评估",
+    "SDK 离线评估",
+    "评分加权汇总"
   ],
   "type": "录播",
   "status": "已上架",
@@ -94,6 +96,10 @@
     },
     {
       "title": "使用UI完成离线评估",
+      "showIndex": true
+    },
+    {
+      "title": "使用SDK完成离线评估",
       "showIndex": true
     }
   ]

@@ -2,8 +2,11 @@ from langfuse.api import DatasetItem
 from langfuse import get_client
 from ai_eval.benchmarks.dataset import get_items
 from langgraph_sdk import get_client as get_agent_client
+from ai_eval.benchmarks.evaluators.weighted_average import weighted_average_evaluator
 from ai_eval.config.benchmark_settings import benchmark_settings
 from opentelemetry import trace
+from ai_eval.benchmarks.evaluators.content_similarity import content_similarity
+from ai_eval.benchmarks.evaluators.emotional_similarity import emotional_similarity
 
 langfuse = get_client()
 
@@ -42,5 +45,7 @@ def run_experiment(name: str, dataset_name: str, description: str | None = ""):
         description=description,
         # 此次实验针对哪些数据项
         data=items,
+        evaluators=[content_similarity, emotional_similarity],
+        composite_evaluator=weighted_average_evaluator,
         task=experiment_task,  # type: ignore
     )
