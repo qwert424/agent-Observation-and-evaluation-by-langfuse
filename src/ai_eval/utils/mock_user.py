@@ -68,4 +68,23 @@ MOCK_USER: dict[str, Auth.types.MinimalUserDict] = {
             "store:list_namespaces",
         ],
     },
+    "test_user": {
+        "identity": "test_user",
+        "display_name": "测试用户",
+        "permissions": [
+            "assistants:read",
+            "assistants:search",
+            "threads:create",
+            "threads:read",
+            "threads:update",
+            "threads:delete",
+            "threads:search",
+            "threads:create_run",
+            "store:put",
+            "store:get",
+            "store:search",
+            "store:delete",
+            "store:list_namespaces",
+        ],
+    },
 }

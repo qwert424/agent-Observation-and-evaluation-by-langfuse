@@ -1,12 +1,34 @@
 from langfuse.api import DatasetItem
 from langfuse import get_client
 from ai_eval.benchmarks.dataset import get_items
+from langgraph_sdk import get_client as get_agent_client
+from ai_eval.config.benchmark_settings import benchmark_settings
+from opentelemetry import trace
 
 langfuse = get_client()
 
 
 async def experiment_task(*, item: DatasetItem, **kwargs):
-    return item.expected_output
+    trace_id = langfuse.get_current_trace_id()  # 获取traceid
+    parent_span_id = langfuse.get_current_observation_id()  # 获取当前的parent_span_id
+    span_attributes = getattr(trace.get_current_span(), "attributes", {})
+    env = span_attributes.get("langfuse.environment")
+    async with get_agent_client(
+        url=benchmark_settings.agent_server,
+        headers={"Authorization": f"Bearer {benchmark_settings.user_id}"},
+    ) as client:
+        result = await client.runs.wait(
+            thread_id=None,
+            assistant_id=benchmark_settings.graph_id,
+            input={"messages": [{"role": "user", "content": item.input}]},
+            metadata={
+                "trace_id": trace_id,
+                "parent_span_id": parent_span_id,
+                "trace_environment": env,
+            },
+        )
+    last_message = result.get("messages")[-1]  # type: ignore
+    return last_message["content"]
 
 
 def run_experiment(name: str, dataset_name: str, description: str | None = ""):
