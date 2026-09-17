@@ -33,7 +33,9 @@
     "线上评估",
     "离线评估",
     "实验对照组",
-    "Task"
+    "Task",
+    "Agent回归测试",
+    "langfuse ui 离线评估"
   ],
   "type": "录播",
   "status": "已上架",
@@ -84,6 +86,14 @@
     },
     {
       "title": "实验",
+      "showIndex": true
+    },
+    {
+      "title": "Agent回归测试",
+      "showIndex": true
+    },
+    {
+      "title": "使用UI完成离线评估",
       "showIndex": true
     }
   ]
