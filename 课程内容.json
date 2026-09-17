@@ -37,7 +37,8 @@
     "Agent回归测试",
     "langfuse ui 离线评估",
     "SDK 离线评估",
-    "评分加权汇总"
+    "评分加权汇总",
+    "离线评估接入Pytest"
   ],
   "type": "录播",
   "status": "已上架",
@@ -100,6 +101,10 @@
     },
     {
       "title": "使用SDK完成离线评估",
+      "showIndex": true
+    },
+    {
+      "title": "离线评估接入Pytest",
       "showIndex": true
     }
   ]

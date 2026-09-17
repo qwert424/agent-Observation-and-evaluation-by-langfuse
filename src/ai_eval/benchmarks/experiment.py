@@ -37,7 +37,7 @@ async def experiment_task(*, item: DatasetItem, **kwargs):
 def run_experiment(name: str, dataset_name: str, description: str | None = ""):
     items = get_items(dataset_name)
     # 运行实验
-    langfuse.run_experiment(
+    return langfuse.run_experiment(
         # 给实验取个名字
         name=name,
         # 如果不配置，则使用name+当前时间自动生成
