@@ -39,7 +39,9 @@
     "SDK 离线评估",
     "评分加权汇总",
     "离线评估接入Pytest",
-    "实验 webhook"
+    "实验 webhook",
+    "告警指标",
+    "Automation"
   ],
   "type": "录播",
   "status": "已上架",
@@ -110,6 +112,10 @@
     },
     {
       "title": "线上实验入口",
+      "showIndex": true
+    },
+    {
+      "title": "告警",
       "showIndex": true
     }
   ]
