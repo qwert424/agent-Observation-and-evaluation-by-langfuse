@@ -127,6 +127,10 @@
     {
       "title": "dashboard",
       "showIndex": true
+    },
+    {
+      "title": "课程总结",
+      "showIndex": true
     }
   ]
 }
