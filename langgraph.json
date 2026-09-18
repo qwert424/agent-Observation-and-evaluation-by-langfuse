@@ -5,7 +5,8 @@
     "root": "."
   },
   "graphs": {
-    "main_agent": "ai_eval.agents.main:agent_factory_with_trace"
+    "main_agent": "ai_eval.agents.main:agent_factory_with_trace",
+    "delete_old_trace": "ai_eval.crons.delete_old_trace:graph"
   },
   "env": ".env",
   "auth": {

@@ -41,7 +41,8 @@
     "离线评估接入Pytest",
     "实验 webhook",
     "告警指标",
-    "Automation"
+    "Automation",
+    "自动清理过期数据"
   ],
   "type": "录播",
   "status": "已上架",
@@ -116,6 +117,10 @@
     },
     {
       "title": "告警",
+      "showIndex": true
+    },
+    {
+      "title": "清理旧数据",
       "showIndex": true
     }
   ]
