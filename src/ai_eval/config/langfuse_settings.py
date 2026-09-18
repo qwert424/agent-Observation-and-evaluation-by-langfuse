@@ -5,6 +5,7 @@ class LangfuseSettings(BaseSettingsWithEnv):
     secret_key: str = ""
     public_key: str = ""
     base_url: str = ""
+    experiment_webhook_secret: str = ""
 
     model_config = {"env_prefix": "LANGFUSE_"}
 

@@ -11,5 +11,9 @@
   "auth": {
     "path": "ai_eval.security.auth:auth",
     "disable_studio_auth": true
+  },
+  "http": {
+    "app": "ai_eval.app.main:app",
+    "enable_custom_route_auth": false
   }
 }
