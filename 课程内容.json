@@ -42,7 +42,8 @@
     "实验 webhook",
     "告警指标",
     "Automation",
-    "自动清理过期数据"
+    "自动清理过期数据",
+    "dashboard"
   ],
   "type": "录播",
   "status": "已上架",
@@ -121,6 +122,10 @@
     },
     {
       "title": "清理旧数据",
+      "showIndex": true
+    },
+    {
+      "title": "dashboard",
       "showIndex": true
     }
   ]
